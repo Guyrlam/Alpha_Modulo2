@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+    <title>Tags HTML</title>
+</head>
+<body>
+    <h1 style="color: rgb(10, 10, 119);font-size: 300%;">Exemplo do uso de algumas tags HTML</h1>
+    <hr />
+
+    <h1>Títulos</h1>
+    <p>Esses são vinculados às tags &lt;h1&gt; até &lt;h6&gt; e cada uma apresenta um nível, sendo representados da seguinte forma:</p>
+    <h1>Título nível 1</h1>
+    <h2>Título nível 2</h2>
+    <h3>Título nível 3</h3>
+    <h4>Título nível 4</h4>
+    <h5>Título nível 5</h5>
+    <h6>Título nível 6</h6>
+    <hr />
+
+    <h1>Parágrafos</h1>
+    <p>Para escrever paragrafos, utilizamos a tag &lt;p&gt;</p>
+    <p>
+        Podemos também utilizar <br />
+        A tag &lt;br&gt; para <br />
+        Efetuar a quebra de linha <br />
+        Assim como fiz nesse parágrafo.
+    </p>
+    <h2>Formatações de parágrafos</h2>
+    <p>Podemos também acrescentar algumas formatações distintas aos paragrafos:</p>
+    <p>A tag &lt;b&gt; reproduz um <b>texto em negrito</b></p>
+    <p>A tag &lt;strong&gt; reproduz um <strong>texto importante</strong></p>
+    <p>A tag &lt;i&gt; reproduz um <i>texto em itálico</i></p>
+    <p>A tag &lt;em&gt; reproduz um <em>texto enfatizado</em></p>
+    <p style="color: red;">
+        *As tags &lt;b&gt; e &lt;strong&gt;, asim como a &lt;i&gt; e  a &lt;em&gt;, reproduzem o mesmo efeito estético, porém a diferença entre elas está no efeito sintático em que elas representam, ou seja, no sentido da frase. Enquanto a &lt;b&gt; e a &lt;i&gt; alteram somente a aparencia do texto, a &lt;strong&gt; e a &lt;em&gt; indicam que aquele é o trecho mais importante da frase e que deve ser lido com mais atenção.
+    </p>
+    <p>A tag &lt;mark&gt; reproduz um <mark>texto marcado</mark></p>
+    <p>A tag &lt;small&gt; reproduz um <small>texto pequeno</small></p>
+    <p>A tag &lt;del&gt; reproduz um <del>texto excluído</del></p>
+    <p>A tag &lt;ins&gt; reproduz um <ins>texto inserido</ins></p>
+    <p>A tag &lt;sub&gt; reproduz um <sub>texto subscrito</sub></p>
+    <p>A tag &lt;sup&gt; reproduz um <sup>texto sobrescrito</sup></p>
+    <h2>Estilos de parágrafos</h2>
+    <p>Além da formatação, podemos também aterar o estilo do texto por meio do atributo <em>"style"</em>, a seguir estão alguns exemplos dessas alterações:</p>
+    <p style="color:royalblue;">Podemos mudar a cor do texto para azul, por exemplo.</p>
+    <p style="font-family: cursive;">Além de alterar sua fonte para várias outras, como a <em>"cursive".</em></p>
+    <p style="font-size: 200%;">E até mesmo aumentar ou diminuir seu tamanho.</p>
+    <hr />
+
+    <h1>Listas</h1>
+    <ol>
+        <li>
+            <p>É possível representar listas como mostrado abaixo; usando as tags &lt;li&gt;, &lt;ul&gt; (para não ordenados) e &lt;ol&gt; (para ordenadas):</p>
+            <ul>
+                <li>Primeiro item</li>
+                <li>Segundo item</li>
+                <li>Terceiro item</li>
+                <li>Quarto item</li>
+            </ul>
+        </li>
+        <li>
+            <p>Assim como criar uma lista usando a tag &lt;dl&gt;, que apresenta o termo a partir da tag &lt;dt&gt; e o descreve com a &lt;dd&gt;:</p>
+            <dl>
+                <dt><b>Termo</b></dt>
+                <dd>descrição do termo</dd>
+                <dt><b>Termo</b></dt>
+                <dd>descrição do termo</dd>
+                <dt><b>Termo</b></dt>
+                <dd>descrição do termo</dd>
+            </dl>
+        </li>
+    </ol>
+    <hr />
+
+    <h1>Hiperlinks</h1>
+    <p>Usando a tag &lt;a&gt;, podemos adicionar um link à nossa página que, ao clicar nele, leva o usuário para outra. Esse link pode estar associado a vários elementos na página; ao clicar no texto abaixo, por exemplo, você será redirecionado para a pagina do Alpha Edtec</p> 
+    <a href="https://www.alphaedtech.org.br/"target="_blank"> Pagina do alphaedtech</a>
+    <p>Entretanto, não necessáriamente esse link está atrelado um texto; esse pode, por exemplo, fazer com que, ao clicar em uma imagem, você seja redirecionado para uma outra página em que essa esteja ampliada:</p>
+    <a href="imagens/imagem1.gif"target="_blank"> <img src="imagens/imagem1.gif" alt="imagem de um personagem estudando"></a>
+    <hr />
+
+    <h1>Tabelas</h1>
+    É possível representar tabelas como mostrado abaixo, usando as tags &lt;tr&gt;, para representar as linhas, &lt;th&gt;, para os cabeçalhos e &lt;td&gt;, para os demais itens da coluna:
+    <table border="1" width="300" height="100">
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>idade</th>
+        </tr>
+        <tr align="center">
+            <td>Antônio</td>
+            <td>Lacerda Gomes</td>
+            <td>40</td>
+        </tr>
+        <tr align="center">
+            <td>Valdecir</td>
+            <td>Silva Campos</td>
+            <td>37</td>
+        </tr>
+        <tr align="center">
+            <td>Ana Maria</td>
+            <td>Monteiro</td>
+            <td>21</td>
+        </tr>
+        <tr align="center">
+            <td>Tomioka</td>
+            <td>de Souza</td>
+            <td>23</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h1>Citações</h1>
+    <p>Outro elemento bastante utlizado em arquivos HTML, são as citações. Elas podem ser apresentadas de duas formas:</p>
+    <ol>
+        <li><p>Por meio da tag &lt;q&gt;:<q>Essa inclui essas duas áspas à citação que apresenta o mesmo efeito das àspas em si, porém serão facilitadoras da aplicação do CSS.</q></p></li>
+        <li>
+            <p>
+                Por meio da tag &lt;blockquote&gt;: <blockquote>Essa destaca ainda mais a citação, apresentando um recuo em relação ao retante do texto que traz um efeito mais agrdável.</blockquote>
+            </p>
+        </li>    
+    </ol>
+</body>
+</html>
