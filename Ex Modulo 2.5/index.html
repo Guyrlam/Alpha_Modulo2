@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Alpha Formulário 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }   
+
+        body {
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            color: aliceblue;
+            text-align: center;
+            align-items: center;
+            padding-top: 1rem;
+        }
+
+        .invitation {
+            padding-top: 10px;
+        }
+
+        .invitation {
+            text-shadow: 0 0px 5px #00b682;
+            font-size: large;
+        }
+
+        .line {
+            border: #ffffff solid 1px;
+            box-shadow: 0 0 5px #00b682;
+        }
+
+        .container {
+            padding: 10px;
+            background-color: aliceblue;
+            margin-top: 20px;
+            margin-left: 443px;
+            border-radius: 10px;
+            max-width: 480px;
+        }
+        /* centralizar container */
+
+        .dados {
+            border-radius: 10px;
+            padding: 10px;
+            border: rgba(165, 164, 164, 0.702) solid 1px;
+            font-size: smaller;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+
+        .dados:hover {
+            border: 1px solid #000000;
+        }
+
+        .dados:hover .legenda-dados {
+            color: black;
+        }
+
+        .legenda-dados {
+            color: rgba(165, 164, 164, 0.702);
+            font-size: small;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .genero-selectors {
+            display: flex;
+            gap: 5px;
+        }
+
+        .genero-select {
+            border: rgba(165, 164, 164, 0.702) solid 1px;
+            padding: 5px;
+        }
+
+        .barra {
+            width: 100%;
+            height: 25px;
+        }
+
+        .preferencias td {
+            max-height: 100%;
+            padding: 5px;
+        }
+
+        .range {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+        }
+
+        .range input {
+            width: 100%;
+        }
+
+        .comentario {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            border-style: none;
+            padding: 10px;
+        }
+
+        .confirma {
+            padding: 8px;
+            background-color: #00b682;
+            border-style: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reseta {
+            width: 74.52px;
+            padding: 8px;
+            background-color: #d0c426;
+            border-style: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="./assets/img.svg" alt="ALPHAFLIX">
+        <hr class="line" />
+        <h1 class="invitation">Venha fazer parte da nossa comunidade!</h1>
+    </header>
+
+    <section class="container">
+        <h2>Cadastre-se!</h2>
+
+        <form action="/registro" method="post">
+            
+        <fieldset class="dados">
+            <legend class="legenda-dados">Dados Pessoais</legend>
+
+            <div class="nome">
+                <label for="nome">Nome:</label><br />
+                <input class="barra" type="text" name="usuario" id="nome"> 
+            </div>
+
+            <div class="senha">
+                <label for="senha">Senha:</label> <br />
+                <input class="barra" type="password" name="usuario-senha" id="senha">
+            </div>
+
+            <div class="email">
+                <label for="email">E-mail:</label><br />
+                <input class="barra" type="email" name="usuario-email" id="email">
+            </div>
+
+            <div class="nascimento">
+                <label for="nascimento">Data de Nascimento:</label> <br />
+                <input class="barra" type="date" name="usuario-nascimento" id="nascimento">
+            </div>
+
+            <div class="genero">
+                <p>Gênero:</p>
+                <div class="genero-selectors">
+                    <div class="genero-select">
+                        <input type="radio" name="usuario-genero" id="masculino">  
+                        <label for="masculino">Masculino:</label>                   
+                    </div>
+                    <div class="genero-select">
+                        <input type="radio" name="usuario-genero" id="feminino">  
+                        <label for="feminino">Feminino:</label>                   
+                    </div>
+                    <div class="genero-select">
+                        <input type="radio" name="usuario-genero" id="outro">  
+                        <label for="outro">Outro</label>                   
+                    </div>
+                </div>
+                
+            </div>
+
+        </fieldset>
+
+        <fieldset class="dados">
+            <legend class="legenda-dados"> Preferências </legend>
+            <p>Selecione os gêneros de séries que você mais gosta:</p>
+            <table class="preferencias">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="acao">
+                        <label for="acao">Ação</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="animacao">
+                        <label for="animacao">Animação</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="aventura">
+                        <label for="acao">Ação</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="comedia">
+                        <label for="comedia">Comédia</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="romance">
+                        <label for="romance">Romance</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="documentario">
+                        <label for="documentario">Documentário</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="policial">
+                        <label for="policial">Policial</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="drama">
+                        <label for="drama">Drama</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="scifi">
+                        <label for="scifi">Sci-fi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="terror">
+                        <label for="terror">Terror</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="fantasia">
+                        <label for="fantasia">Fantasia</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="preferencia" id="suspense">
+                        <label for="suspense">Suspense</label>
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+
+        <fieldset class="dados">
+            <legend class="legenda-dados"> Avaliação</legend>
+            <p>Arraste a barra de acordo com sua satisfação com o Alphaflix! </p>
+            <div class="range">
+                &#x1F621;<input type="range" name="satisfação">&#x1F603;
+            </div>
+            <div class="comentario">
+                <p>Deixe um comentário para nossos desenvolvedores!</p>
+                <div>
+                    <label for="tipo-comentario">Tipo:</label>
+                    <select name="tipo-comentario" id="tipo-comentario">
+                        <optgroup class="desagradaveis">
+                            <option value="reclamação">Reclamação</option>
+                        </optgroup>
+                        <optgroup class="agradaveis">
+                            <option value="sugestão">Sugestão</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="outro">Outro</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <textarea style="color: rgba(116, 116, 116, 0.702);" name="comentario" id="cometario" cols="30" rows="10">Comentário:</textarea>
+            </div>
+            
+        </fieldset>
+
+        <section class="button">
+            <button class="confirma" type="submit">
+                Confirmar
+            </button>
+            <button class="reseta" type="reset">
+                Reiniciar
+            </button>
+        </section>
+        </form>
+    </section>
+    
+    
+</body>
+</html>
