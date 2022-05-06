@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criando imagens SVG</title>
+
+        <style>
+            .logo-svg {
+                display: flex;
+                flex-direction: column;
+                border-color: black;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.392);
+                align-items: center;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;  
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>Imagem SVG</h1>
+        <p>Essa imagem foi vetorizada no photopea e está em diferentes tamanhos para demonstrar as propriedade do SVG</p>
+        <figure class="logo-svg">
+            <img  width="600" height="186" src="./assets/imagem-teste.svg" alt="logo do cruzeiro esporte clube">
+            <figcaption>600x186</figcaption>
+        </figure>
+        <figure class="logo-svg">
+            <img  width="300" height="93" src="./assets/imagem-teste.svg" alt="logo do cruzeiro esporte clube">
+            <figcaption>300x93</figcaption>
+        </figure>
+        <figure class="logo-svg">
+            <img  width="150" height="46.5" src="./assets/imagem-teste.svg" alt="logo do cruzeiro esporte clube">
+            <figcaption>150x46.5</figcaption>
+        </figure>
+    </body>
+</html>
