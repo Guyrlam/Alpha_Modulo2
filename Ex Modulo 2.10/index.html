@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso do canvas</title>
+</head>
+<body>
+    <h1>Uso da tag canvas</h1>
+    <p>
+        &lt;canvas&gt; é um elemento HTML que cria um quado bitmap na página que pode ser usado para reprenetação gráfica usando a linguagem de "script" (normalmente JavaScript ). Isto pode ser usado, por exemplo, para desenhar gráficos, fazer composições de fotos ou animações simples (e não tão simples ). Veja abaixo o exemplo de exibição de uma imagem criada no <a href="https://www.photopea.com/"> Photopea</a> dentro do quadro criado pela tag em pauta:
+    </p>
+    <canvas id="quadro" width="400" height="300" style="border:1px solid black ;">
+        <p>Seu navegador não possui suporte para a tag canvas.</p>
+    </canvas>
+    <script type="text/javascript">
+        let canvas=document.getElementById("quadro")
+        let ctx=canvas.getContext("2d")
+
+        let logo=new Image()
+        logo.src="./assets/template.svg"
+        logo.addEventListener('load',()=>{
+            ctx.drawImage(logo,30,40)
+        })
+    </script>
+
+</body>
+</html>
